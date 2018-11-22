@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<company>
+    <categorys>
+
+        <category name= "Androidphone">
+            <product>
+                <name>Android</name>
+                <model>Samsung-S9</model>
+                <data>01-10-2018</data>
+                <color>green</color>
+                <price>$300</price>
+            </product>
+
+            <product>
+                <name>Android</name>
+                <model>Honor-A6</model>
+                <data>01-08-2017</data>
+                <color>white</color>
+                <price>$100</price>
+            </product>
+        </category>
+
+        <category name = "Iphone">
+            <product>
+                <name>IOS</name>>
+                <model>Iphone-X10</model>
+                <data>01-09-2018</data>
+                <color>red</color>
+                <price>$500</price>
+            </product>>
+
+            <product>
+                <name>IOS</name>>
+                <model>Iphone-S5</model>
+                <data>01-09-2015</data>
+                <color>black</color>
+                <price>$100</price>
+            </product>>
+        </category>>
+
+    </categorys>
+</company>
