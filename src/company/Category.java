@@ -1,88 +1,45 @@
 package company;
 
-import com.sun.xml.internal.txw2.annotation.XmlElement;
+import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import java.util.Date;
-
-@XmlElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Category {
-
-    private String categorysName;
-    private String Name;
-    private String model;
-    private Date date;
-    private String color;
-    private int price;
+    @XmlAttribute
+    private String name;
+    @XmlElement(name = "product")
+    private List<Product> products = new ArrayList<>();
 
     public Category() {
     }
 
-    public Category(String categorysName, String name, String model, Date date, String color, int price) {
-        this.categorysName = categorysName;
-        Name = name;
-        this.model = model;
-        this.date = date;
-        this.color = color;
-        this.price = price;
+    public Category(String name, List<Product> products) {
+        this.name = name;
+        this.products = products;
     }
-    @XmlElement
-    public String getCategorysName() {
-        return categorysName;
-    }
-    @XmlElement
-    public void setCategorysName(String categorysName) {
-        this.categorysName = categorysName;
-    }
-    @XmlElement
+
     public String getName() {
-        return Name;
+        return name;
     }
-    @XmlElement
+
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
-    @XmlElement
-    public String getModel() {
-        return model;
+
+    public List<Product> getProducts() {
+        return products;
     }
-    @XmlElement
-    public void setModel(String model) {
-        this.model = model;
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
-    @XmlElement
-    public Date getDate() {
-        return date;
-    }
-    @XmlElement
-    public void setDate(Date date) {
-        this.date = date;
-    }
-    @XmlElement
-    public String getColor() {
-        return color;
-    }
-    @XmlElement
-    public void setColor(String color) {
-        this.color = color;
-    }
-    @XmlElement
-    public int getPrice() {
-        return price;
-    }
-    @XmlElement
-    public void setPrice(int price) {
-        this.price = price;
-    }
-    @XmlElement
+
     @Override
     public String toString() {
         return "Category{" +
-                "categorysName='" + categorysName + '\'' +
-                ", Name='" + Name + '\'' +
-                ", model='" + model + '\'' +
-                ", date=" + date +
-                ", color='" + color + '\'' +
-                ", price=" + price +
+                "name='" + name + '\'' +
+                ", products=" + products +
                 '}';
     }
 }

@@ -1,6 +1,6 @@
 package JaxbUnmarshal;
 
-import company.Category;
+import company.Company;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -9,19 +9,23 @@ import java.io.File;
 
 public class JAXBuilder {
 
-        public static void unmarshalFile() throws JAXBException {
-            File file = new File("src\\file\\company.xml");
-            JAXBContext context = JAXBContext.newInstance(Category.class);
 
-            Unmarshaller unmarshaller = context.createUnmarshaller();
-            Category product = (Category) unmarshaller.unmarshal(file);
+    public static void unmarshalFile()  {
 
-            System.out.println(product.getCategorysName());
-            System.out.println(product.getName());
-            System.out.println(product.getModel());
-            System.out.println(product.getDate());
-            System.out.println(product.getColor());
-            System.out.println(product.getPrice());
+            try {
+                File file = new File("src\\file\\company.xml");
+                JAXBContext context = JAXBContext.newInstance(Company.class);
+
+                Unmarshaller unmarshaller = context.createUnmarshaller();
+                Company product = (Company) unmarshaller.unmarshal(file);
+                System.out.println(product.getCategorys());
+
+//                System.out.println(product.getColor());
+//                System.out.println(product.getPrice());
+
+            } catch (JAXBException e){
+                e.printStackTrace();
+            }
         }
 
 }

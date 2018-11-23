@@ -1,7 +1,7 @@
 //package stax;
 //
 //import app.App;
-//import company.Category;
+//import company.Product;
 //
 //import javax.xml.namespace.QName;
 //import javax.xml.stream.XMLEventReader;
@@ -16,10 +16,10 @@
 //public class XMLStaxReaderParcer {
 //    App app = new App();
 //
-//    private static List<Category> parseXML(String fileName) {
+//    private static List<Product> parseXML(String fileName) {
 //
-//        List<Category> categoryList = new ArrayList<>();
-//        Category category = null;
+//        List<Product> categoryList = new ArrayList<>();
+//        Product category = null;
 //        XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
 //
 //        try{
@@ -29,8 +29,8 @@
 //                XMLEvent xmlEvent = xmlEventReader.nextEvent();
 //                if (xmlEvent.isStartElement()){
 //                    StartElement startElement = xmlEvent.asStartElement();
-//                    if(startElement.getName().getLocalPart().equals("Category")){
-//                        category = new Category();
+//                    if(startElement.getName().getLocalPart().equals("Product")){
+//                        category = new Product();
 //
 //                        Attribute attribute = startElement.getAttributeByName(new QName("categorysName"));
 //
