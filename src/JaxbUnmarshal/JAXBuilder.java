@@ -1,32 +1,52 @@
 package JaxbUnmarshal;
 
+import company.Category;
+import company.Categorys;
 import company.Company;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import java.io.File;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamReader;
+import javax.xml.transform.stream.StreamSource;
+import java.util.ArrayList;
+import java.util.List;
 
 public class JAXBuilder {
 
+    public static List<Categorys> unmarshalFile() throws  XMLStreamException {
 
-    public static void unmarshalFile()  {
+        List<Categorys> categorysList = new ArrayList<>();
 
-            try {
-                File file = new File("src\\file\\company.xml");
-                JAXBContext context = JAXBContext.newInstance(Company.class);
+        XMLInputFactory xmlInputFactory = XMLInputFactory.newFactory();
+        StreamSource streamSource = new StreamSource("src\\file\\company.xml");
+        XMLStreamReader xmlStreamReader = xmlInputFactory.createXMLStreamReader(streamSource);
+        xmlStreamReader.nextTag();
 
-                Unmarshaller unmarshaller = context.createUnmarshaller();
-                Company product = (Company) unmarshaller.unmarshal(file);
-                System.out.println(product.getCategorys());
+        while (!xmlStreamReader.isEndElement()){
+            xmlStreamReader.nextTag();
 
-//                System.out.println(product.getColor());
-//                System.out.println(product.getPrice());
+            if (xmlStreamReader.getLocalName().equals("categorys")) {
+                try {
+                    JAXBContext context = JAXBContext.newInstance(Categorys.class);
+                    Unmarshaller unmarshaller = context.createUnmarshaller();
+                    JAXBElement <Categorys> jaxcom = unmarshaller.unmarshal(xmlStreamReader, Categorys.class);
 
-            } catch (JAXBException e){
-                e.printStackTrace();
+                    Categorys categorys = jaxcom.getValue();
+                    categorysList.add(categorys);
+
+                } catch (JAXBException e) {
+                    e.printStackTrace();
+                }
             }
         }
+        //System.out.println(categorysList);
+        return categorysList;
+    }
+
 
 }
 

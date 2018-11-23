@@ -7,7 +7,9 @@ import java.util.List;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Company {
+
     @XmlElement(name = "categorys")
+
     private List<Categorys> categorys = new ArrayList<>();
 
     public Company() {

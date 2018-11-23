@@ -1,15 +1,15 @@
 package company;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement
 public class Categorys {
 
+    @XmlAttribute
+    private String name;
     @XmlElement(name = "category")
     private List<Category> category = new ArrayList<>();
 
@@ -17,8 +17,17 @@ public class Categorys {
     public Categorys() {
     }
 
-    public Categorys(List<Category> category) {
+    public Categorys(String name, List<Category> category) {
+        this.name = name;
         this.category = category;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<Category> getCategory() {
@@ -32,7 +41,8 @@ public class Categorys {
     @Override
     public String toString() {
         return "Categorys{" +
-                "category=" + category +
+                "name='" + name + '\'' +
+                ", category=" + category +
                 '}';
     }
 }

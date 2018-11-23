@@ -10,14 +10,14 @@ public class Product {
 
     private String name;
     private String model;
-    private Date date;
+    private String date;
     private String color;
     private int price;
 
     public Product() {
     }
 
-    public Product(String name, String model, Date date, String color, int price) {
+    public Product(String name, String model, String date, String color, int price) {
         this.name = name;
         this.model = model;
         this.date = date;
@@ -41,11 +41,11 @@ public class Product {
         this.model = model;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

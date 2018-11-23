@@ -1,42 +1,76 @@
 <?xml version="1.0"?>
 <company>
-    <categorys>
-
-        <category name= "Androidphone">
+    <categorys name = "Android">
+        <category name = "phone">
             <product>
-                <name>Android</name>
-                <model>Samsung-S9</model>
+                <name>SAMSUNG</name>
+                <model>S9</model>
                 <data>01-10-2018</data>
                 <color>green</color>
                 <price>300</price>
             </product>
 
             <product>
-                <name>Android</name>
+                <name>Huawei</name>
                 <model>Honor-A6</model>
-                <data>01-08-2017</data>
+                <data>04-08-2017</data>
                 <color>white</color>
                 <price>100</price>
             </product>
         </category>
 
-        <category name = "Iphone">
+        <category name = "fablet">
             <product>
-                <name>IOS</name>>
+                <name>Acer</name>
+                <model>J8</model>
+                <data>02-10-2018</data>
+                <color>green</color>
+                <price>300</price>
+            </product>
+
+            <product>
+                <name>Sony</name>
+                <model>ExperiaZ9</model>
+                <data>03-08-2017</data>
+                <color>white</color>
+                <price>100</price>
+            </product>
+        </category>
+    </categorys>
+    <categorys name = "IOS">
+        <category name = "phone">
+            <product>
+                <name>Apple</name>
                 <model>Iphone-X10</model>
-                <data>01-09-2018</data>
+                <data>10-09-2018</data>
                 <color>red</color>
                 <price>500</price>
             </product>>
 
             <product>
-                <name>IOS</name>>
+                <name>Apple</name>
                 <model>Iphone-S5</model>
-                <data>01-09-2015</data>
+                <data>11-09-2015</data>
                 <color>black</color>
                 <price>100</price>
-            </product>>
-        </category>>
+            </product>
+        </category>
+        <category name = "iPad">
+            <product>
+                <name>Apple</name>
+                <model>Xax55</model>
+                <data>21-10-2018</data>
+                <color>green</color>
+                <price>300</price>
+            </product>
 
+            <product>
+                <name>Apple</name>
+                <model>XmasS</model>
+                <data>24-08-2017</data>
+                <color>white</color>
+                <price>100</price>
+            </product>
+        </category>
     </categorys>
 </company>
