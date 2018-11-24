@@ -6,6 +6,7 @@ import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Category {
+
     @XmlAttribute
     private String name;
     @XmlElement(name = "product")
