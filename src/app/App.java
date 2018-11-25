@@ -17,10 +17,14 @@ public class App {
         //XMLStAXReader.ReaderFile();
         //JAXBuilder.unmarshalFile();
         JAXBuilder jaxBuilder = new JAXBuilder();
+        System.out.println("Перевели из XML в объекта");
         System.out.println(JAXBuilder.unmarshalFile().toString());
         System.out.println("---");
         Json json = new Json();
+        System.out.println("Перевели из Объекта в Json");
         json.fromJaxbToJson();
+        System.out.println("from Json to Object");
+        //String str = json.fromJsontoObject()
 
         for (Categorys categorys: jaxBuilder.unmarshalFile()){
             System.out.println("*************************************");

@@ -1,0 +1,82 @@
+{
+  "categorys": [
+    {
+      "name": "Android",
+      "category": [
+        {
+          "name": "phone",
+          "products": [
+            {
+              "name": "SAMSUNG",
+              "model": "Ss985",
+              "color": "green",
+              "price": 300
+            },
+            {
+              "name": "Huawei",
+              "model": "Hon644",
+              "color": "white",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "name": "fablet",
+          "products": [
+            {
+              "name": "Acer",
+              "model": "JJ888",
+              "color": "green",
+              "price": 300
+            },
+            {
+              "name": "Sony",
+              "model": "ExperiaZ9",
+              "color": "white",
+              "price": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IOS",
+      "category": [
+        {
+          "name": "phone",
+          "products": [
+            {
+              "name": "Apple",
+              "model": "IphoneX10",
+              "color": "red",
+              "price": 500
+            },
+            {
+              "name": "Apple",
+              "model": "IphoneS5",
+              "color": "black",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "name": "iPad",
+          "products": [
+            {
+              "name": "Apple",
+              "model": "Xax555",
+              "color": "green",
+              "price": 300
+            },
+            {
+              "name": "Apple",
+              "model": "Xmas444",
+              "color": "white",
+              "price": 100
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
