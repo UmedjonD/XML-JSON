@@ -10,13 +10,11 @@ import java.io.*;
 
 public class Json {
 
-
-    static Gson gson = new GsonBuilder().setPrettyPrinting().create();
     //перевод из объекта в Json
-    public static   void fromJaxbToJson() throws IOException  {
-
+    public  void fromJaxbToJson() throws IOException  {
         Company company = new Company();
         JAXBuilder jaxBuilder = new JAXBuilder();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         try (FileWriter fileWriter = new FileWriter("src\\file\\company.json")) {
             company.setCategorys(jaxBuilder.unmarshalFile());
@@ -28,10 +26,10 @@ public class Json {
     }
 
     //перевод из json в объект
-    public static Company fromJsontoObject(String toObject){
+    public  Company fromJsontoObject(String toObject){
 
         Company company = new Company();
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         try {
             Reader reader = new FileReader(toObject);
@@ -44,11 +42,9 @@ public class Json {
         return company;
     }
 
-    public static void fromObjecttoXML(Company company){
+    public  void fromObjecttoXML(Company company){
 
-        try {
-
-            FileWriter fileWriter = new FileWriter("src\\file\\creatXmlcompany.xml");
+        try (FileWriter fileWriter = new FileWriter("src\\file\\creatXmlcompany.xml")){
 
             JAXBContext jaxbContext = JAXBContext.newInstance(Company.class);
             Marshaller marshaller = jaxbContext.createMarshaller();
