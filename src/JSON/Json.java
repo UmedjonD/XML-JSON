@@ -41,7 +41,7 @@ public class Json {
         System.out.println(company);
         return company;
     }
-
+    //перевод из объекта в ХМЛ
     public  void fromObjecttoXML(Company company){
 
         try (FileWriter fileWriter = new FileWriter("src\\file\\creatXmlcompany.xml")){
@@ -51,9 +51,7 @@ public class Json {
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.marshal(company, fileWriter);
 
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (JAXBException | IOException e) {
             e.printStackTrace();
         }
         System.out.println(company);

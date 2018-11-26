@@ -16,7 +16,16 @@
                           <xs:element type="xs:string" name="model"/>
                           <xs:element type="xs:string" name="date"/>
                           <xs:element type="xs:string" name="color"/>
-                          <xs:element type="xs:string" name="price"/>
+
+                          <xs:element type="xs:string" name="price">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:integer">
+                              <xs:minInclusive value="0"/>
+                              <xs:maxInclusive value="1000"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                          </xs:element>
+
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
