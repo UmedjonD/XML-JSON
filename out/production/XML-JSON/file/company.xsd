@@ -14,7 +14,7 @@
                         <xs:sequence>
                           <xs:element type="xs:string" name="name"/>
                           <xs:element type="xs:string" name="model"/>
-                          <xs:element type="xs:string" name="data"/>
+                          <xs:element type="xs:string" name="date"/>
                           <xs:element type="xs:string" name="color"/>
                           <xs:element type="xs:string" name="price"/>
                         </xs:sequence>

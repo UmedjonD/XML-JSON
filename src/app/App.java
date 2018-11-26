@@ -14,17 +14,17 @@ import java.io.IOException;
 public class App {
     public static void main(String[] args) throws JAXBException, IOException, XMLStreamException {
 
-        //XMLStAXReader.ReaderFile();
-        //JAXBuilder.unmarshalFile();
         JAXBuilder jaxBuilder = new JAXBuilder();
+        Json json = new Json();
         System.out.println("Перевели из XML в объекта");
         System.out.println(JAXBuilder.unmarshalFile().toString());
-        System.out.println("---");
-        Json json = new Json();
         System.out.println("Перевели из Объекта в Json");
         json.fromJaxbToJson();
-        System.out.println("from Json to Object");
-        //String str = json.fromJsontoObject()
+        System.out.println("Из Json в Object");
+        Company company = json.fromJsontoObject("src\\file\\company.json");
+        System.out.println("Из Объекта в XML");
+        json.fromObjecttoXML(company);
+
 
         for (Categorys categorys: jaxBuilder.unmarshalFile()){
             System.out.println("*************************************");
