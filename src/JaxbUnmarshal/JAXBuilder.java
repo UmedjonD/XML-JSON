@@ -1,8 +1,6 @@
 package JaxbUnmarshal;
 
-import company.Category;
 import company.Categorys;
-import company.Company;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -43,7 +41,6 @@ public class JAXBuilder {
                 }
             }
         }
-        //System.out.println(categorysList);
         return categorysList;
     }
 

@@ -4,18 +4,17 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import company.Company;
 
+import javax.xml.bind.*;
 import javax.xml.stream.XMLStreamException;
 import java.io.*;
-import java.util.List;
 
 public class Json {
 
-    static Gson gson = new GsonBuilder().setPrettyPrinting().create();
     //перевод из объекта в Json
-    public static   void fromJaxbToJson() throws IOException  {
-
+    public  void fromJaxbToJson() throws IOException  {
         Company company = new Company();
         JAXBuilder jaxBuilder = new JAXBuilder();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         try (FileWriter fileWriter = new FileWriter("src\\file\\company.json")) {
             company.setCategorys(jaxBuilder.unmarshalFile());
@@ -27,10 +26,10 @@ public class Json {
     }
 
     //перевод из json в объект
-    public static Company fromJsontoObject(String toObject){
+    public  Company fromJsontoObject(String toObject){
 
         Company company = new Company();
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         try {
             Reader reader = new FileReader(toObject);
@@ -39,12 +38,29 @@ public class Json {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        System.out.println(company);
         return company;
     }
+    //перевод из объекта в ХМЛ
+    public  void fromObjecttoXML(Company company){
 
+        try (FileWriter fileWriter = new FileWriter("src\\file\\creatXmlcompany.xml")){
+
+            JAXBContext jaxbContext = JAXBContext.newInstance(Company.class);
+            Marshaller marshaller = jaxbContext.createMarshaller();
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            marshaller.marshal(company, fileWriter);
+
+<<<<<<< HEAD
     public static Company fromObjecttoXML(Company company){
 
         return  null;
+=======
+        } catch (JAXBException | IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(company);
+>>>>>>> ff6316547660ddfd7c856250113c229e29e7abf9
     }
 
 }

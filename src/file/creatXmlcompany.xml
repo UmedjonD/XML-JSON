@@ -1,8 +1,7 @@
-<?xml version="1.0"?>
-<company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="company.xsd">
-    <categorys name = "Android">
-        <category name = "phone">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<company>
+    <categorys name="Android">
+        <category name="phone">
             <product>
                 <name>SAMSUNG</name>
                 <model>Ss985</model>
@@ -10,7 +9,6 @@
                 <color>green</color>
                 <price>300</price>
             </product>
-
             <product>
                 <name>Huawei</name>
                 <model>Hon644</model>
@@ -19,8 +17,7 @@
                 <price>100</price>
             </product>
         </category>
-
-        <category name = "fablet">
+        <category name="fablet">
             <product>
                 <name>Acer</name>
                 <model>JJ888</model>
@@ -28,7 +25,6 @@
                 <color>green</color>
                 <price>300</price>
             </product>
-
             <product>
                 <name>Sony</name>
                 <model>ExperiaZ9</model>
@@ -38,16 +34,15 @@
             </product>
         </category>
     </categorys>
-    <categorys name = "IOS">
-        <category name = "phone">
+    <categorys name="IOS">
+        <category name="phone">
             <product>
                 <name>Apple</name>
                 <model>IphoneX10</model>
                 <date>10-09-2018</date>
                 <color>red</color>
                 <price>500</price>
-            </product>>
-
+            </product>
             <product>
                 <name>Apple</name>
                 <model>IphoneS5</model>
@@ -56,7 +51,7 @@
                 <price>100</price>
             </product>
         </category>
-        <category name = "iPad">
+        <category name="iPad">
             <product>
                 <name>Apple</name>
                 <model>Xax555</model>
@@ -64,7 +59,6 @@
                 <color>green</color>
                 <price>300</price>
             </product>
-
             <product>
                 <name>Apple</name>
                 <model>Xmas444</model>

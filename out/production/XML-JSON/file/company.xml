@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
-<company>
+<company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="company.xsd">
     <categorys name = "Android">
         <category name = "phone">
             <product>
                 <name>SAMSUNG</name>
                 <model>Ss985</model>
-                <data>01-10-2018</data>
+                <date>01-10-2018</date>
                 <color>green</color>
                 <price>300</price>
             </product>
@@ -13,7 +14,7 @@
             <product>
                 <name>Huawei</name>
                 <model>Hon644</model>
-                <data>04-08-2017</data>
+                <date>04-08-2017</date>
                 <color>white</color>
                 <price>100</price>
             </product>
@@ -23,7 +24,7 @@
             <product>
                 <name>Acer</name>
                 <model>JJ888</model>
-                <data>02-10-2018</data>
+                <date>02-10-2018</date>
                 <color>green</color>
                 <price>300</price>
             </product>
@@ -31,7 +32,7 @@
             <product>
                 <name>Sony</name>
                 <model>ExperiaZ9</model>
-                <data>03-08-2017</data>
+                <date>03-08-2017</date>
                 <color>white</color>
                 <price>100</price>
             </product>
@@ -42,7 +43,7 @@
             <product>
                 <name>Apple</name>
                 <model>IphoneX10</model>
-                <data>10-09-2018</data>
+                <date>10-09-2018</date>
                 <color>red</color>
                 <price>500</price>
             </product>>
@@ -50,7 +51,7 @@
             <product>
                 <name>Apple</name>
                 <model>IphoneS5</model>
-                <data>11-09-2015</data>
+                <date>11-09-2015</date>
                 <color>black</color>
                 <price>100</price>
             </product>
@@ -59,7 +60,7 @@
             <product>
                 <name>Apple</name>
                 <model>Xax555</model>
-                <data>21-10-2018</data>
+                <date>21-10-2018</date>
                 <color>green</color>
                 <price>300</price>
             </product>
@@ -67,7 +68,7 @@
             <product>
                 <name>Apple</name>
                 <model>Xmas444</model>
-                <data>24-08-2017</data>
+                <date>24-08-2017</date>
                 <color>white</color>
                 <price>100</price>
             </product>

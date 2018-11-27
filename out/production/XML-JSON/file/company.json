@@ -9,12 +9,14 @@
             {
               "name": "SAMSUNG",
               "model": "Ss985",
+              "date": "01-10-2018",
               "color": "green",
               "price": 300
             },
             {
               "name": "Huawei",
               "model": "Hon644",
+              "date": "04-08-2017",
               "color": "white",
               "price": 100
             }
@@ -26,12 +28,14 @@
             {
               "name": "Acer",
               "model": "JJ888",
+              "date": "02-10-2018",
               "color": "green",
               "price": 300
             },
             {
               "name": "Sony",
               "model": "ExperiaZ9",
+              "date": "03-08-2017",
               "color": "white",
               "price": 100
             }
@@ -48,12 +52,14 @@
             {
               "name": "Apple",
               "model": "IphoneX10",
+              "date": "10-09-2018",
               "color": "red",
               "price": 500
             },
             {
               "name": "Apple",
               "model": "IphoneS5",
+              "date": "11-09-2015",
               "color": "black",
               "price": 100
             }
@@ -65,12 +71,14 @@
             {
               "name": "Apple",
               "model": "Xax555",
+              "date": "21-10-2018",
               "color": "green",
               "price": 300
             },
             {
               "name": "Apple",
               "model": "Xmas444",
+              "date": "24-08-2017",
               "color": "white",
               "price": 100
             }
