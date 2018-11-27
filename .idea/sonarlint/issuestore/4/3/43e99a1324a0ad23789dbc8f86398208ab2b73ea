@@ -1,0 +1,4 @@
+
+Fsquid:S2440"*Remove this instantiation of "JAXBuilder".(àƒè´ýÿÿÿÿ
+¦%squid:RedundantThrowsDeclarationCheck"uRemove the declaration of thrown exception 'javax.xml.bind.JAXBException', as it cannot be thrown from method's body.(›¡•Ì
+Qsquid:S2209"5Change this instance-reference to a static reference.(–Š´Ñøÿÿÿÿ
