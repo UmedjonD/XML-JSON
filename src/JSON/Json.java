@@ -43,7 +43,7 @@ public class Json {
     }
 
     public static Company fromObjecttoXML(Company company){
-        
+
         return  null;
     }
 
